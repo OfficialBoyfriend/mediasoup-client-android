@@ -1,16 +1,10 @@
 package org.mediasoup.droid;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public class Device {
-
   private long mNativeDevice;
-
   public Device() {
     mNativeDevice = nativeNewDevice();
   }
-
   public void dispose() {
     checkDeviceExists();
     nativeFreeDevice(mNativeDevice);
@@ -26,7 +20,7 @@ public class Device {
    * @throws MediasoupException, if device already loaded
    */
   public void load(
-      @NonNull String routerRtpCapabilities, PeerConnectionOptions peerConnectionOptions)
+      String routerRtpCapabilities, PeerConnection.Options peerConnectionOptions)
       throws MediasoupException {
     checkDeviceExists();
     nativeLoad(
@@ -80,7 +74,7 @@ public class Device {
    * @return bool
    * @throws MediasoupException, if device not loaded or if invalid kind
    */
-  public boolean canProduce(@NonNull String kind) throws MediasoupException {
+  public boolean canProduce(String kind) throws MediasoupException {
     checkDeviceExists();
     return nativeCanProduce(mNativeDevice, kind);
   }
@@ -99,11 +93,11 @@ public class Device {
    * @throws MediasoupException, if device not loaded
    */
   public SendTransport createSendTransport(
-      @NonNull SendTransport.Listener listener,
-      @NonNull String id,
-      @NonNull String iceParameters,
-      @NonNull String iceCandidates,
-      @NonNull String dtlsParameters)
+      SendTransport.Listener listener,
+      String id,
+      String iceParameters,
+      String iceCandidates,
+      String dtlsParameters)
       throws MediasoupException {
     return createSendTransport(
         listener, id, iceParameters, iceCandidates, dtlsParameters, null, null, null);
@@ -124,12 +118,12 @@ public class Device {
    * @throws MediasoupException, if device not loaded
    */
   public SendTransport createSendTransport(
-      @NonNull SendTransport.Listener listener,
-      @NonNull String id,
-      @NonNull String iceParameters,
-      @NonNull String iceCandidates,
-      @NonNull String dtlsParameters,
-      @Nullable String sctpParameters)
+      SendTransport.Listener listener,
+      String id,
+      String iceParameters,
+      String iceCandidates,
+      String dtlsParameters,
+      String sctpParameters)
       throws MediasoupException {
     return createSendTransport(
         listener, id, iceParameters, iceCandidates, dtlsParameters, sctpParameters, null, null);
@@ -150,14 +144,14 @@ public class Device {
    * @throws MediasoupException, if device not loaded
    */
   public SendTransport createSendTransport(
-      @NonNull SendTransport.Listener listener,
-      @NonNull String id,
-      @NonNull String iceParameters,
-      @NonNull String iceCandidates,
-      @NonNull String dtlsParameters,
-      @Nullable String sctpParameters,
-      @Nullable PeerConnectionOptions options,
-      @Nullable String appData)
+      SendTransport.Listener listener,
+      String id,
+      String iceParameters,
+      String iceCandidates,
+      String dtlsParameters,
+      String sctpParameters,
+      PeerConnection.Options options,
+      String appData)
       throws MediasoupException {
     checkDeviceExists();
     return nativeCreateSendTransport(
@@ -189,11 +183,11 @@ public class Device {
    * @throws MediasoupException , if device not loaded
    */
   public RecvTransport createRecvTransport(
-      @NonNull RecvTransport.Listener listener,
-      @NonNull String id,
-      @NonNull String iceParameters,
-      @NonNull String iceCandidates,
-      @NonNull String dtlsParameters)
+      RecvTransport.Listener listener,
+      String id,
+      String iceParameters,
+      String iceCandidates,
+      String dtlsParameters)
       throws MediasoupException {
     return createRecvTransport(
         listener, id, iceParameters, iceCandidates, dtlsParameters, null, null, null);
@@ -214,12 +208,12 @@ public class Device {
    * @throws MediasoupException , if device not loaded
    */
   public RecvTransport createRecvTransport(
-      @NonNull RecvTransport.Listener listener,
-      @NonNull String id,
-      @NonNull String iceParameters,
-      @NonNull String iceCandidates,
-      @NonNull String dtlsParameters,
-      @Nullable String sctpParameters) {
+      RecvTransport.Listener listener,
+      String id,
+      String iceParameters,
+      String iceCandidates,
+      String dtlsParameters,
+      String sctpParameters) {
     return createRecvTransport(
         listener, id, iceParameters, iceCandidates, dtlsParameters, sctpParameters, null, null);
   }
@@ -240,14 +234,14 @@ public class Device {
    * @throws MediasoupException, if device not loaded
    */
   public RecvTransport createRecvTransport(
-      @NonNull RecvTransport.Listener listener,
-      @NonNull String id,
-      @NonNull String iceParameters,
-      @NonNull String iceCandidates,
-      @NonNull String dtlsParameters,
-      @Nullable String sctpParameters,
-      @Nullable PeerConnectionOptions options,
-      @Nullable String appData) {
+      RecvTransport.Listener listener,
+      String id,
+      String iceParameters,
+      String iceCandidates,
+      String dtlsParameters,
+      String sctpParameters,
+      PeerConnection.Options options,
+      String appData) {
     checkDeviceExists();
     return nativeCreateRecvTransport(
         mNativeDevice,
