@@ -22,27 +22,26 @@ JNI_REGISTRATION_EXPORT extern const char kClassPath_org_mediasoup_droid_DataPro
 const char kClassPath_org_mediasoup_droid_DataProducer[] = "org/mediasoup/droid/DataProducer";
 
 JNI_REGISTRATION_EXPORT extern const char
-    kClassPath_org_mediasoup_droid_DataProducer_00024DataProducerListener[];
-const char kClassPath_org_mediasoup_droid_DataProducer_00024DataProducerListener[] =
-    "org/mediasoup/droid/DataProducer$DataProducerListener";
+        kClassPath_org_mediasoup_droid_DataProducer_00024Listener[];
+const char kClassPath_org_mediasoup_droid_DataProducer_00024Listener[] =
+        "org/mediasoup/droid/DataProducer$Listener";
 // Leaking this jclass as we cannot use LazyInstance from some threads.
 JNI_REGISTRATION_EXPORT std::atomic<jclass> g_org_mediasoup_droid_DataProducer_clazz(nullptr);
 #ifndef org_mediasoup_droid_DataProducer_clazz_defined
 #define org_mediasoup_droid_DataProducer_clazz_defined
 inline jclass org_mediasoup_droid_DataProducer_clazz(JNIEnv* env) {
-  return base::android::LazyGetClass(env, kClassPath_org_mediasoup_droid_DataProducer,
-      &g_org_mediasoup_droid_DataProducer_clazz);
+    return base::android::LazyGetClass(env, kClassPath_org_mediasoup_droid_DataProducer,
+                                       &g_org_mediasoup_droid_DataProducer_clazz);
 }
 #endif
 // Leaking this jclass as we cannot use LazyInstance from some threads.
 JNI_REGISTRATION_EXPORT std::atomic<jclass>
-    g_org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(nullptr);
-#ifndef org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz_defined
-#define org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz_defined
-inline jclass org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(JNIEnv* env) {
-  return base::android::LazyGetClass(env,
-      kClassPath_org_mediasoup_droid_DataProducer_00024DataProducerListener,
-      &g_org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz);
+        g_org_mediasoup_droid_DataProducer_00024Listener_clazz(nullptr);
+#ifndef org_mediasoup_droid_DataProducer_00024Listener_clazz_defined
+#define org_mediasoup_droid_DataProducer_00024Listener_clazz_defined
+inline jclass org_mediasoup_droid_DataProducer_00024Listener_clazz(JNIEnv* env) {
+    return base::android::LazyGetClass(env, kClassPath_org_mediasoup_droid_DataProducer_00024Listener,
+                                       &g_org_mediasoup_droid_DataProducer_00024Listener_clazz);
 }
 #endif
 
@@ -53,223 +52,221 @@ inline jclass org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(J
 // Step 3: Method stubs.
 namespace mediasoupclient {
 
-static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetId(JNIEnv* env, jlong
+    static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetId(JNIEnv* env, jlong
     producer);
 
-JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetId(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetId(env, producer).Release();
-}
+    JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetId(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetId(env, producer).Release();
+    }
 
-static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetLocalId(JNIEnv* env, jlong
+    static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetLocalId(JNIEnv* env, jlong
     producer);
 
-JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetLocalId(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetLocalId(env, producer).Release();
-}
+    JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetLocalId(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetLocalId(env, producer).Release();
+    }
 
-static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetSctpStreamParameters(JNIEnv*
+    static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetSctpStreamParameters(JNIEnv*
     env, jlong producer);
 
-JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetSctpStreamParameters(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetSctpStreamParameters(env, producer).Release();
-}
+    JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetSctpStreamParameters(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetSctpStreamParameters(env, producer).Release();
+    }
 
-static jint JNI_DataProducer_GetReadyState(JNIEnv* env, jlong producer);
+    static jint JNI_DataProducer_GetReadyState(JNIEnv* env, jlong producer);
 
-JNI_GENERATOR_EXPORT jint Java_org_mediasoup_droid_DataProducer_nativeGetReadyState(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetReadyState(env, producer);
-}
+    JNI_GENERATOR_EXPORT jint Java_org_mediasoup_droid_DataProducer_nativeGetReadyState(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetReadyState(env, producer);
+    }
 
-static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetLabel(JNIEnv* env, jlong
+    static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetLabel(JNIEnv* env, jlong
     producer);
 
-JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetLabel(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetLabel(env, producer).Release();
-}
+    JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetLabel(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetLabel(env, producer).Release();
+    }
 
-static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetProtocol(JNIEnv* env, jlong
+    static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetProtocol(JNIEnv* env, jlong
     producer);
 
-JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetProtocol(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetProtocol(env, producer).Release();
-}
+    JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetProtocol(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetProtocol(env, producer).Release();
+    }
 
-static jlong JNI_DataProducer_GetBufferedAmount(JNIEnv* env, jlong producer);
+    static jlong JNI_DataProducer_GetBufferedAmount(JNIEnv* env, jlong producer);
 
-JNI_GENERATOR_EXPORT jlong Java_org_mediasoup_droid_DataProducer_nativeGetBufferedAmount(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetBufferedAmount(env, producer);
-}
+    JNI_GENERATOR_EXPORT jlong Java_org_mediasoup_droid_DataProducer_nativeGetBufferedAmount(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetBufferedAmount(env, producer);
+    }
 
-static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetAppData(JNIEnv* env, jlong
+    static base::android::ScopedJavaLocalRef<jstring> JNI_DataProducer_GetAppData(JNIEnv* env, jlong
     producer);
 
-JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetAppData(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_GetAppData(env, producer).Release();
-}
+    JNI_GENERATOR_EXPORT jstring Java_org_mediasoup_droid_DataProducer_nativeGetAppData(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_GetAppData(env, producer).Release();
+    }
 
-static jboolean JNI_DataProducer_IsClosed(JNIEnv* env, jlong producer);
+    static jboolean JNI_DataProducer_IsClosed(JNIEnv* env, jlong producer);
 
-JNI_GENERATOR_EXPORT jboolean Java_org_mediasoup_droid_DataProducer_nativeIsClosed(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_IsClosed(env, producer);
-}
+    JNI_GENERATOR_EXPORT jboolean Java_org_mediasoup_droid_DataProducer_nativeIsClosed(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_IsClosed(env, producer);
+    }
 
-static void JNI_DataProducer_Close(JNIEnv* env, jlong producer);
+    static void JNI_DataProducer_Close(JNIEnv* env, jlong producer);
 
-JNI_GENERATOR_EXPORT void Java_org_mediasoup_droid_DataProducer_nativeClose(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer) {
-  return JNI_DataProducer_Close(env, producer);
-}
+    JNI_GENERATOR_EXPORT void Java_org_mediasoup_droid_DataProducer_nativeClose(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer) {
+        return JNI_DataProducer_Close(env, producer);
+    }
 
-static void JNI_DataProducer_Send(JNIEnv* env, jlong producer,
-    const base::android::JavaParamRef<jbyteArray>& data,
-    jboolean binary);
+    static void JNI_DataProducer_Send(JNIEnv* env, jlong producer,
+                                      const base::android::JavaParamRef<jbyteArray>& data,
+                                      jboolean binary);
 
-JNI_GENERATOR_EXPORT void Java_org_mediasoup_droid_DataProducer_nativeSend(
-    JNIEnv* env,
-    jclass jcaller,
-    jlong producer,
-    jbyteArray data,
-    jboolean binary) {
-  return JNI_DataProducer_Send(env, producer, base::android::JavaParamRef<jbyteArray>(env, data),
-      binary);
-}
+    JNI_GENERATOR_EXPORT void Java_org_mediasoup_droid_DataProducer_nativeSend(
+            JNIEnv* env,
+            jclass jcaller,
+            jlong producer,
+            jbyteArray data,
+            jboolean binary) {
+        return JNI_DataProducer_Send(env, producer, base::android::JavaParamRef<jbyteArray>(env, data),
+                                     binary);
+    }
 
 
-static std::atomic<jmethodID>
-    g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onOpen(nullptr);
-static void Java_DataProducerListener_onOpen(JNIEnv* env, const base::android::JavaRef<jobject>&
-    obj, const base::android::JavaRef<jobject>& dataProducer) {
-  jclass clazz = org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env);
-  CHECK_CLAZZ(env, obj.obj(),
-      org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env));
+    static std::atomic<jmethodID> g_org_mediasoup_droid_DataProducer_00024Listener_onOpen(nullptr);
+    static void Java_DataProducerListener_onOpen(JNIEnv* env, const base::android::JavaRef<jobject>& obj, const
+    base::android::JavaRef<jobject>& dataProducer) {
+        jclass clazz = org_mediasoup_droid_DataProducer_00024Listener_clazz(env);
+        CHECK_CLAZZ(env, obj.obj(),
+                    org_mediasoup_droid_DataProducer_00024Listener_clazz(env));
 
-  jni_generator::JniJavaCallContextChecked call_context;
-  call_context.Init<
-      base::android::MethodID::TYPE_INSTANCE>(
-          env,
-          clazz,
-          "onOpen",
-          "(Lorg/mediasoup/droid/DataProducer;)V",
-          &g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onOpen);
+        jni_generator::JniJavaCallContextChecked call_context;
+        call_context.Init<
+                base::android::MethodID::TYPE_INSTANCE>(
+                env,
+                clazz,
+                "onOpen",
+                "(Lorg/mediasoup/droid/DataProducer;)V",
+                &g_org_mediasoup_droid_DataProducer_00024Listener_onOpen);
 
-     env->CallVoidMethod(obj.obj(),
-          call_context.base.method_id, dataProducer.obj());
-}
+        env->CallVoidMethod(obj.obj(),
+                            call_context.base.method_id, dataProducer.obj());
+    }
 
-static std::atomic<jmethodID>
-    g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onClose(nullptr);
-static void Java_DataProducerListener_onClose(JNIEnv* env, const base::android::JavaRef<jobject>&
-    obj, const base::android::JavaRef<jobject>& dataProducer) {
-  jclass clazz = org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env);
-  CHECK_CLAZZ(env, obj.obj(),
-      org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env));
+    static std::atomic<jmethodID> g_org_mediasoup_droid_DataProducer_00024Listener_onClose(nullptr);
+    static void Java_DataProducerListener_onClose(JNIEnv* env, const base::android::JavaRef<jobject>& obj, const
+    base::android::JavaRef<jobject>& dataProducer) {
+        jclass clazz = org_mediasoup_droid_DataProducer_00024Listener_clazz(env);
+        CHECK_CLAZZ(env, obj.obj(),
+                    org_mediasoup_droid_DataProducer_00024Listener_clazz(env));
 
-  jni_generator::JniJavaCallContextChecked call_context;
-  call_context.Init<
-      base::android::MethodID::TYPE_INSTANCE>(
-          env,
-          clazz,
-          "onClose",
-          "(Lorg/mediasoup/droid/DataProducer;)V",
-          &g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onClose);
+        jni_generator::JniJavaCallContextChecked call_context;
+        call_context.Init<
+                base::android::MethodID::TYPE_INSTANCE>(
+                env,
+                clazz,
+                "onClose",
+                "(Lorg/mediasoup/droid/DataProducer;)V",
+                &g_org_mediasoup_droid_DataProducer_00024Listener_onClose);
 
-     env->CallVoidMethod(obj.obj(),
-          call_context.base.method_id, dataProducer.obj());
-}
+        env->CallVoidMethod(obj.obj(),
+                            call_context.base.method_id, dataProducer.obj());
+    }
 
-static std::atomic<jmethodID>
-    g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onBufferedAmountChange(nullptr);
-static void Java_DataProducerListener_onBufferedAmountChange(JNIEnv* env, const
-    base::android::JavaRef<jobject>& obj, const base::android::JavaRef<jobject>& dataProducer,
-    jlong sentDataSize) {
-  jclass clazz = org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env);
-  CHECK_CLAZZ(env, obj.obj(),
-      org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env));
+    static std::atomic<jmethodID>
+            g_org_mediasoup_droid_DataProducer_00024Listener_onBufferedAmountChange(nullptr);
+    static void Java_DataProducerListener_onBufferedAmountChange(JNIEnv* env, const base::android::JavaRef<jobject>&
+    obj, const base::android::JavaRef<jobject>& dataProducer,
+                                                                 jlong sentDataSize) {
+        jclass clazz = org_mediasoup_droid_DataProducer_00024Listener_clazz(env);
+        CHECK_CLAZZ(env, obj.obj(),
+                    org_mediasoup_droid_DataProducer_00024Listener_clazz(env));
 
-  jni_generator::JniJavaCallContextChecked call_context;
-  call_context.Init<
-      base::android::MethodID::TYPE_INSTANCE>(
-          env,
-          clazz,
-          "onBufferedAmountChange",
-          "(Lorg/mediasoup/droid/DataProducer;J)V",
-          &g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onBufferedAmountChange);
+        jni_generator::JniJavaCallContextChecked call_context;
+        call_context.Init<
+                base::android::MethodID::TYPE_INSTANCE>(
+                env,
+                clazz,
+                "onBufferedAmountChange",
+                "(Lorg/mediasoup/droid/DataProducer;J)V",
+                &g_org_mediasoup_droid_DataProducer_00024Listener_onBufferedAmountChange);
 
-     env->CallVoidMethod(obj.obj(),
-          call_context.base.method_id, dataProducer.obj(), sentDataSize);
-}
+        env->CallVoidMethod(obj.obj(),
+                            call_context.base.method_id, dataProducer.obj(), sentDataSize);
+    }
 
-static std::atomic<jmethodID>
-    g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onTransportClose(nullptr);
-static void Java_DataProducerListener_onTransportClose(JNIEnv* env, const
-    base::android::JavaRef<jobject>& obj, const base::android::JavaRef<jobject>& dataProducer) {
-  jclass clazz = org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env);
-  CHECK_CLAZZ(env, obj.obj(),
-      org_mediasoup_droid_DataProducer_00024DataProducerListener_clazz(env));
+    static std::atomic<jmethodID>
+            g_org_mediasoup_droid_DataProducer_00024Listener_onTransportClose(nullptr);
+    static void Java_DataProducerListener_onTransportClose(JNIEnv* env, const base::android::JavaRef<jobject>& obj,
+                                                           const base::android::JavaRef<jobject>& dataProducer) {
+        jclass clazz = org_mediasoup_droid_DataProducer_00024Listener_clazz(env);
+        CHECK_CLAZZ(env, obj.obj(),
+                    org_mediasoup_droid_DataProducer_00024Listener_clazz(env));
 
-  jni_generator::JniJavaCallContextChecked call_context;
-  call_context.Init<
-      base::android::MethodID::TYPE_INSTANCE>(
-          env,
-          clazz,
-          "onTransportClose",
-          "(Lorg/mediasoup/droid/DataProducer;)V",
-          &g_org_mediasoup_droid_DataProducer_00024DataProducerListener_onTransportClose);
+        jni_generator::JniJavaCallContextChecked call_context;
+        call_context.Init<
+                base::android::MethodID::TYPE_INSTANCE>(
+                env,
+                clazz,
+                "onTransportClose",
+                "(Lorg/mediasoup/droid/DataProducer;)V",
+                &g_org_mediasoup_droid_DataProducer_00024Listener_onTransportClose);
 
-     env->CallVoidMethod(obj.obj(),
-          call_context.base.method_id, dataProducer.obj());
-}
+        env->CallVoidMethod(obj.obj(),
+                            call_context.base.method_id, dataProducer.obj());
+    }
 
-static std::atomic<jmethodID> g_org_mediasoup_droid_DataProducer_Constructor(nullptr);
-static base::android::ScopedJavaLocalRef<jobject> Java_DataProducer_Constructor(JNIEnv* env, jlong
+    static std::atomic<jmethodID> g_org_mediasoup_droid_DataProducer_Constructor(nullptr);
+    static base::android::ScopedJavaLocalRef<jobject> Java_DataProducer_Constructor(JNIEnv* env, jlong
     nativeProducer) {
-  jclass clazz = org_mediasoup_droid_DataProducer_clazz(env);
-  CHECK_CLAZZ(env, clazz,
-      org_mediasoup_droid_DataProducer_clazz(env), NULL);
+        jclass clazz = org_mediasoup_droid_DataProducer_clazz(env);
+        CHECK_CLAZZ(env, clazz,
+                    org_mediasoup_droid_DataProducer_clazz(env), NULL);
 
-  jni_generator::JniJavaCallContextChecked call_context;
-  call_context.Init<
-      base::android::MethodID::TYPE_INSTANCE>(
-          env,
-          clazz,
-          "<init>",
-          "(J)V",
-          &g_org_mediasoup_droid_DataProducer_Constructor);
+        jni_generator::JniJavaCallContextChecked call_context;
+        call_context.Init<
+                base::android::MethodID::TYPE_INSTANCE>(
+                env,
+                clazz,
+                "<init>",
+                "(J)V",
+                &g_org_mediasoup_droid_DataProducer_Constructor);
 
-  jobject ret =
-      env->NewObject(clazz,
-          call_context.base.method_id, nativeProducer);
-  return base::android::ScopedJavaLocalRef<jobject>(env, ret);
-}
+        jobject ret =
+                env->NewObject(clazz,
+                               call_context.base.method_id, nativeProducer);
+        return base::android::ScopedJavaLocalRef<jobject>(env, ret);
+    }
 
 }  // namespace mediasoupclient
 
