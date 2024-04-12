@@ -54,6 +54,9 @@ function get_libmediasoupclient()
 	DEST="deps/libmediasoupclient"
 
 	get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
+
+  # Get libsdptransform dependency
+  #	sh -c "cd ${DEST} && ./scripts/get-dep.sh" libsdptransform
 }
 
 function get_webrtc()

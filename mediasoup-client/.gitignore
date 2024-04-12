@@ -1,2 +1,5 @@
 /build
 /.cxx
+/deps/webrtc
+/deps/depot_tools
+/deps/libmediasoupclient

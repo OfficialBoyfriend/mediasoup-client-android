@@ -39,7 +39,9 @@ jni_generator mediasoupclient ./src/main/jni/generated_mediasoupclient_jni/jni/ 
 		"./src/main/java/org/mediasoup/droid/SendTransport.java" \
 		"./src/main/java/org/mediasoup/droid/Transport.java" \
 		"./src/main/java/org/mediasoup/droid/Logger.java" \
-		"./src/main/java/org/mediasoup/droid/MediasoupClient.java"
+		"./src/main/java/org/mediasoup/droid/MediasoupClient.java" \
+		"./src/main/java/org/mediasoup/droid/DataConsumer.java" \
+		"./src/main/java/org/mediasoup/droid/DataProducer.java"
 
 jni_generator mediasoupclient::test ./src/androidTest/jni/generated_mediasoupclient_jni/jni/ \
 		"./src/androidTest/java/org/mediasoup/droid/data/Parameters.java"

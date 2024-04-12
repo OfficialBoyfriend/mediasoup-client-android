@@ -1,7 +1,5 @@
 package org.mediasoup.droid;
 
-import androidx.annotation.Nullable;
-
 import org.webrtc.CalledByNative;
 import org.webrtc.MediaStreamTrack;
 import org.webrtc.RTCUtils;
@@ -22,7 +20,7 @@ public class Consumer {
 
   private final long mNativeConsumer;
 
-  @Nullable private final MediaStreamTrack mCachedTrack;
+  private final MediaStreamTrack mCachedTrack;
 
   @CalledByNative
   public Consumer(long nativeConsumer) {
